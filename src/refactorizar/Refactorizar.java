@@ -13,9 +13,7 @@ public class Refactorizar {
         int digitos = 0;
         int contadorDigitos = 0;
 
-        System.out.println("Numero de digitos:");
-        Scanner numero = new Scanner(System.in);
-        digitos = numero.nextInt();
+        digitos = entradaDato();
 
         if (digitos <= 0) {
             System.out.println("Ingrese como parámetro, un numero de digitos correcto (mayor que 0): ");
@@ -66,6 +64,14 @@ public class Refactorizar {
                 }
             }
         }
+    }
+
+    private static int entradaDato() {
+        int digitos;
+        System.out.println("Numero de digitos:");
+        Scanner numero = new Scanner(System.in);
+        digitos = numero.nextInt();
+        return digitos;
     }
 
 }
